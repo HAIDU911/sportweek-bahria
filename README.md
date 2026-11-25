@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🏆 SportsWeek Manager
+# 🏆 SportWeek Bahria
 
-**A full-stack tournament management platform for university sports weeks — public live scoreboard, captain workspaces, an operator desk for running the competition, and a read-only admin console.**
+**A full-stack tournament management platform for Bahria University sports weeks — public live scoreboard, captain workspaces, an operator desk for running the competition, and a read-only admin console.**
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white&style=flat-square)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white&style=flat-square)
@@ -11,7 +11,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white&style=flat-square)
 ![Supabase](https://img.shields.io/badge/Supabase-Auth%20%2B%20Postgres-3ECF8E?logo=supabase&logoColor=white&style=flat-square)
 
-[![CI](https://github.com/HAIDU911/sportsweek-manager-2026/actions/workflows/ci.yml/badge.svg)](https://github.com/HAIDU911/sportsweek-manager-2026/actions/workflows/ci.yml)
+[![CI](https://github.com/HAIDU911/sportweek-bahria/actions/workflows/ci.yml/badge.svg)](https://github.com/HAIDU911/sportweek-bahria/actions/workflows/ci.yml)
 ![Backend tests](https://img.shields.io/badge/backend%20tests-77%20passing-brightgreen?style=flat-square)
 ![Frontend tests](https://img.shields.io/badge/frontend%20tests-23%20passing-brightgreen?style=flat-square)
 ![Migrations](https://img.shields.io/badge/migrations-6%20applied-blue?style=flat-square)
