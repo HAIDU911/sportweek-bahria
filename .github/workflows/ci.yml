@@ -1,0 +1,53 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: 8.0.x }
+      - run: dotnet restore backend/SportsWeek.sln
+      - run: dotnet build backend/SportsWeek.sln -c Release --no-restore
+      - run: dotnet test backend/Tests -c Release --no-build
+      - run: dotnet list backend/SportsWeek.sln package --vulnerable --include-transitive
+  frontend:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: frontend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm audit --omit=dev --audit-level=high
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/check_contract.py
+  database:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env: { POSTGRES_PASSWORD: pw }
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 5s --health-retries 10
+    env: { PGPASSWORD: pw }
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply Supabase stub, migrations and security tests
+        run: |
+          psql -h localhost -U postgres -c "create role anon nologin; create role authenticated nologin;"
+          psql -h localhost -U postgres -c "create schema auth; create function auth.uid() returns uuid language sql stable as \$\$ select nullif(current_setting('request.jwt.claim.sub', true),'')::uuid \$\$;"
+          for f in supabase/migrations/*.sql supabase/seed.sql; do psql -v ON_ERROR_STOP=1 -h localhost -U postgres -f "$f"; done
+          psql -v ON_ERROR_STOP=1 -h localhost -U postgres -f supabase/tests/security_tests.sql
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: gitleaks/gitleaks-action@v2

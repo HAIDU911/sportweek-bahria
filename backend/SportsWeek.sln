@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsWeek.Domain", "Domain\SportsWeek.Domain.csproj", "{3330DDB3-1931-4302-9C37-9C4478AE2F6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsWeek.Contracts", "Contracts\SportsWeek.Contracts.csproj", "{90313177-3406-4075-8C95-8DDA4AFA9E4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsWeek.Application", "Application\SportsWeek.Application.csproj", "{D42A27E2-7323-4F2C-9852-38C07D29F8D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsWeek.Infrastructure", "Infrastructure\SportsWeek.Infrastructure.csproj", "{244D3A82-E41F-492C-9C79-D07CFC397FDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsWeek.Api", "Api\SportsWeek.Api.csproj", "{96221B56-CDD0-4360-BD8B-14CFD11A6F49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsWeek.Tests", "Tests\SportsWeek.Tests.csproj", "{5E7EEE5A-07A8-4ACE-B3C6-402B183F7F16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3330DDB3-1931-4302-9C37-9C4478AE2F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3330DDB3-1931-4302-9C37-9C4478AE2F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3330DDB3-1931-4302-9C37-9C4478AE2F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3330DDB3-1931-4302-9C37-9C4478AE2F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90313177-3406-4075-8C95-8DDA4AFA9E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90313177-3406-4075-8C95-8DDA4AFA9E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90313177-3406-4075-8C95-8DDA4AFA9E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90313177-3406-4075-8C95-8DDA4AFA9E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42A27E2-7323-4F2C-9852-38C07D29F8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42A27E2-7323-4F2C-9852-38C07D29F8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42A27E2-7323-4F2C-9852-38C07D29F8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42A27E2-7323-4F2C-9852-38C07D29F8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{244D3A82-E41F-492C-9C79-D07CFC397FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244D3A82-E41F-492C-9C79-D07CFC397FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244D3A82-E41F-492C-9C79-D07CFC397FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244D3A82-E41F-492C-9C79-D07CFC397FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96221B56-CDD0-4360-BD8B-14CFD11A6F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96221B56-CDD0-4360-BD8B-14CFD11A6F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96221B56-CDD0-4360-BD8B-14CFD11A6F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96221B56-CDD0-4360-BD8B-14CFD11A6F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7EEE5A-07A8-4ACE-B3C6-402B183F7F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7EEE5A-07A8-4ACE-B3C6-402B183F7F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7EEE5A-07A8-4ACE-B3C6-402B183F7F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7EEE5A-07A8-4ACE-B3C6-402B183F7F16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
